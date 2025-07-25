@@ -10,14 +10,12 @@
     --background: 0 0% 100%;
     --foreground: 220 26% 14%;
     
-    /* Navy Blue - Primary Brand Color */
-    --navy: 220 47% 17%;
-    --navy-light: 220 47% 25%;
-    --navy-lighter: 220 47% 35%;
-    
-    /* Canadian Red Accent */
-    --canadian-red: 0 84% 60%;
-    --canadian-red-light: 0 84% 70%;
+    /* Angel's Trucking Brand Colors */
+    --primary-blue: 214 100% 50%;
+    --primary-blue-light: 214 100% 60%;
+    --primary-blue-lighter: 214 100% 85%;
+    --accent-blue: 214 80% 45%;
+    --text-dark: 220 20% 20%;
     
     /* Professional Grays */
     --gray-50: 220 14% 96%;

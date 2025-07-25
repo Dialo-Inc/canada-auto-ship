@@ -25,16 +25,14 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				
-				/* Canada Auto Ship Brand Colors */
-				navy: {
-					DEFAULT: 'hsl(var(--navy))',
-					light: 'hsl(var(--navy-light))',
-					lighter: 'hsl(var(--navy-lighter))',
+				/* Angel's Trucking Brand Colors */
+				'primary-blue': {
+					DEFAULT: 'hsl(var(--primary-blue))',
+					light: 'hsl(var(--primary-blue-light))',
+					lighter: 'hsl(var(--primary-blue-lighter))',
 				},
-				'canadian-red': {
-					DEFAULT: 'hsl(var(--canadian-red))',
-					light: 'hsl(var(--canadian-red-light))',
-				},
+				'accent-blue': 'hsl(var(--accent-blue))',
+				'text-dark': 'hsl(var(--text-dark))',
 				gray: {
 					50: 'hsl(var(--gray-50))',
 					100: 'hsl(var(--gray-100))',

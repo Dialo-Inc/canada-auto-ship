@@ -39,14 +39,14 @@ export default function Hero() {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-navy via-navy-light to-navy-lighter overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-blue via-primary-blue-light to-primary-blue-lighter overflow-hidden">
       {/* Background Image Carousel with Overlay */}
       <div className="absolute inset-0 z-0">
         {heroSlides.map((slide, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? "opacity-30" : "opacity-0"
+              index === currentSlide ? "opacity-60" : "opacity-0"
             }`}
           >
             <img
@@ -56,7 +56,7 @@ export default function Hero() {
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/60 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/70 via-primary-blue/50 to-transparent"></div>
       </div>
 
       {/* Carousel Navigation */}
@@ -76,186 +76,76 @@ export default function Hero() {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Main Content */}
-          <div className="text-white space-y-8">
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2 text-canadian-red">
-                <Shield className="h-5 w-5" />
-                <span className="font-semibold">Canada's Trusted Auto Transport</span>
-              </div>
-              
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                Ship Your Car
-                <span className="block text-canadian-red">Anywhere in Canada</span>
-                <span className="block text-3xl lg:text-4xl font-normal mt-2">
-                  Safely & Hassle-Free
-                </span>
-              </h1>
-              
-              {/* Dynamic subtitle based on current slide */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
-                <p className="text-lg font-semibold text-canadian-red">
-                  {heroSlides[currentSlide].subtitle}
-                </p>
-              </div>
-              
-              <p className="text-xl text-gray-100 max-w-2xl">
-                Get your free instant quote today and experience Canada's most trusted 
-                car shipping service. Over 25+ years of safe, reliable transport coast to coast.
+        <div className="flex flex-col items-center justify-center text-center text-white space-y-8">
+          <div className="space-y-6 max-w-4xl">
+            <div className="flex items-center justify-center space-x-2 text-white">
+              <Shield className="h-6 w-6" />
+              <span className="font-semibold text-lg">Angel's Trusted Transport</span>
+            </div>
+            
+            <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+              Professional
+              <span className="block text-white">Vehicle Transport</span>
+              <span className="block text-2xl lg:text-3xl font-normal mt-4 text-white/90">
+                Delivering on Promise
+              </span>
+            </h1>
+            
+            {/* Dynamic subtitle based on current slide */}
+            <div className="bg-white/15 backdrop-blur-sm rounded-lg p-6 mb-8">
+              <p className="text-xl font-semibold text-white">
+                {heroSlides[currentSlide].subtitle}
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/quote">
-                <Button variant="accent" size="hero" className="w-full sm:w-auto">
+                <Button variant="accent" size="hero" className="bg-white text-primary-blue hover:bg-white/90">
                   Get Free Quote
                 </Button>
               </Link>
-              <Link to="/about">
+              <Link to="/contact">
                 <Button 
-                  variant="red-outline" 
+                  variant="outline" 
                   size="xl" 
-                  className="w-full sm:w-auto bg-white/10 border-white text-white hover:bg-white hover:text-navy"
+                  className="border-white text-white hover:bg-white hover:text-primary-blue"
                 >
-                  Learn More
+                  Call (780) 707-8444
                 </Button>
               </Link>
             </div>
 
             {/* Trust Indicators */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-12">
               <div className="text-center">
-                <div className="flex items-center justify-center mb-2">
-                  <Shield className="h-8 w-8 text-canadian-red" />
+                <div className="flex items-center justify-center mb-3">
+                  <Shield className="h-10 w-10 text-white" />
                 </div>
-                <div className="text-sm font-semibold">Licensed &</div>
-                <div className="text-sm">Insured</div>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-2">
-                  <Clock className="h-8 w-8 text-canadian-red" />
-                </div>
-                <div className="text-sm font-semibold">Fast &</div>
-                <div className="text-sm">Reliable</div>
+                <div className="text-base font-semibold">Licensed &</div>
+                <div className="text-base">Insured</div>
               </div>
               <div className="text-center">
-                <div className="flex items-center justify-center mb-2">
-                  <MapPin className="h-8 w-8 text-canadian-red" />
+                <div className="flex items-center justify-center mb-3">
+                  <Clock className="h-10 w-10 text-white" />
                 </div>
-                <div className="text-sm font-semibold">Coast to</div>
-                <div className="text-sm">Coast</div>
+                <div className="text-base font-semibold">Fast &</div>
+                <div className="text-base">Reliable</div>
               </div>
               <div className="text-center">
-                <div className="flex items-center justify-center mb-2">
-                  <Award className="h-8 w-8 text-canadian-red" />
+                <div className="flex items-center justify-center mb-3">
+                  <MapPin className="h-10 w-10 text-white" />
                 </div>
-                <div className="text-sm font-semibold">25+ Years</div>
-                <div className="text-sm">Experience</div>
+                <div className="text-base font-semibold">Nationwide</div>
+                <div className="text-base">Coverage</div>
               </div>
-            </div>
-          </div>
-
-          {/* Right Column - Quote Form */}
-          <div className="lg:flex lg:justify-end">
-            <div className="bg-white rounded-2xl shadow-strong p-8 max-w-md w-full">
-              <div className="text-center mb-6">
-                <h2 className="text-2xl font-bold text-navy mb-2">Get Instant Quote</h2>
-                <p className="text-gray-600">Free, no obligation estimate</p>
+              <div className="text-center">
+                <div className="flex items-center justify-center mb-3">
+                  <Award className="h-10 w-10 text-white" />
+                </div>
+                <div className="text-base font-semibold">25+ Years</div>
+                <div className="text-base">Experience</div>
               </div>
-              
-              <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy focus:border-transparent"
-                      placeholder="John"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy focus:border-transparent"
-                      placeholder="Doe"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy focus:border-transparent"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy focus:border-transparent"
-                    placeholder="(555) 123-4567"
-                  />
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      From City
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy focus:border-transparent"
-                      placeholder="Toronto"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      To City
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy focus:border-transparent"
-                      placeholder="Vancouver"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Vehicle Type
-                  </label>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-navy focus:border-transparent">
-                    <option value="">Select vehicle type</option>
-                    <option value="sedan">Sedan</option>
-                    <option value="suv">SUV</option>
-                    <option value="truck">Truck</option>
-                    <option value="motorcycle">Motorcycle</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                
-                <Button variant="hero" className="w-full" size="lg">
-                  Get My Free Quote
-                </Button>
-                
-                <p className="text-xs text-gray-500 text-center">
-                  By submitting, you agree to our privacy policy and terms of service.
-                </p>
-              </form>
             </div>
           </div>
         </div>
@@ -268,7 +158,7 @@ export default function Hero() {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-smooth ${
-              index === currentSlide ? "bg-canadian-red" : "bg-white/30"
+              index === currentSlide ? "bg-white" : "bg-white/30"
             }`}
           />
         ))}

@@ -28,22 +28,22 @@ export default function Navigation() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-navy text-white py-2 px-4">
+      <div className="bg-primary-blue text-white py-2 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
               <Phone className="h-4 w-4" />
-              <a href="tel:+1-800-SHIP-CAR" className="hover:text-canadian-red transition-smooth">
-                1-800-SHIP-CAR
+              <a href="tel:+17807078444" className="hover:text-white/80 transition-smooth">
+                (780) 707-8444
               </a>
             </div>
             <div className="flex items-center gap-1">
               <MapPin className="h-4 w-4" />
-              <span>Serving All of Canada</span>
+              <span>Edmonton, Alberta</span>
             </div>
           </div>
           <div className="hidden md:block">
-            <span className="text-canadian-red">✓</span> Licensed & Insured
+            <span className="text-white">✓</span> Licensed & Insured
           </div>
         </div>
       </div>
@@ -60,16 +60,12 @@ export default function Navigation() {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="flex items-center">
-                <div className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">C</span>
-                </div>
-                <div className="ml-2">
-                  <div className="text-xl font-bold text-navy">Canada Auto Ship</div>
-                  <div className="text-xs text-gray-500">Trusted Transport Solutions</div>
-                </div>
-              </div>
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src="src/assets/angels-trucking-logo.png" 
+                alt="Angel's Trucking" 
+                className="h-12 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -79,8 +75,8 @@ export default function Navigation() {
                   key={item.name}
                   to={item.href}
                   className={cn(
-                    "text-gray-700 hover:text-navy transition-smooth font-medium",
-                    location.pathname === item.href && "text-navy border-b-2 border-navy"
+                    "text-gray-700 hover:text-primary-blue transition-smooth font-medium",
+                    location.pathname === item.href && "text-primary-blue border-b-2 border-primary-blue"
                   )}
                 >
                   {item.name}
@@ -91,13 +87,13 @@ export default function Navigation() {
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center space-x-3">
               <Link to="/quote">
-                <Button variant="navy-outline" size="sm">
+                <Button variant="outline" size="sm" className="border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white">
                   Get Quote
                 </Button>
               </Link>
-              <Link to="/quote">
-                <Button variant="hero" size="sm">
-                  Book Now
+              <Link to="/contact">
+                <Button variant="default" size="sm" className="bg-primary-blue hover:bg-primary-blue-light">
+                  Call Now
                 </Button>
               </Link>
             </div>
