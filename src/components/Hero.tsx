@@ -1,20 +1,78 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, MapPin, Award } from "lucide-react";
+import { Shield, Clock, MapPin, Award, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-car-transport.jpg";
 
 export default function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroSlides = [
+    {
+      image: "/lovable-uploads/cd053653-855d-459f-ab26-ec7a02f6f4da.png",
+      title: "Professional Truck Transport",
+      subtitle: "Specialized hauling for pickup trucks and large vehicles"
+    },
+    {
+      image: "/lovable-uploads/a3f4466b-b7e3-4d1b-8811-28fb486fa5e7.png", 
+      title: "Multi-Vehicle Car Carriers",
+      subtitle: "Efficient transport for multiple vehicles in one shipment"
+    },
+    {
+      image: "/lovable-uploads/798b0daf-4947-406f-ab73-1b1596ca848e.png",
+      title: "Open Auto Transport",
+      subtitle: "Cost-effective shipping for cars, SUVs, and trucks"
+    }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [heroSlides.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  };
   return (
     <section className="relative min-h-screen flex items-center bg-gradient-to-br from-navy via-navy-light to-navy-lighter overflow-hidden">
-      {/* Background Image with Overlay */}
+      {/* Background Image Carousel with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Professional car transport across Canada"
-          className="w-full h-full object-cover opacity-30"
-        />
+        {heroSlides.map((slide, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? "opacity-30" : "opacity-0"
+            }`}
+          >
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))}
         <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/60 to-transparent"></div>
       </div>
+
+      {/* Carousel Navigation */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-smooth"
+      >
+        <ChevronLeft className="h-6 w-6" />
+      </button>
+      
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-smooth"
+      >
+        <ChevronRight className="h-6 w-6" />
+      </button>
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
@@ -34,6 +92,13 @@ export default function Hero() {
                   Safely & Hassle-Free
                 </span>
               </h1>
+              
+              {/* Dynamic subtitle based on current slide */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-6">
+                <p className="text-lg font-semibold text-canadian-red">
+                  {heroSlides[currentSlide].subtitle}
+                </p>
+              </div>
               
               <p className="text-xl text-gray-100 max-w-2xl">
                 Get your free instant quote today and experience Canada's most trusted 
@@ -196,8 +261,21 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Carousel Indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
+        {heroSlides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-smooth ${
+              index === currentSlide ? "bg-canadian-red" : "bg-white/30"
+            }`}
+          />
+        ))}
+      </div>
+
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white">
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 text-white">
         <div className="animate-bounce">
           <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
             <div className="w-1 h-3 bg-white rounded-full mt-2"></div>

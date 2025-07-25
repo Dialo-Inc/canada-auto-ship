@@ -2,8 +2,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Car, Truck, Bike, Shield, Clock, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
-import openTransportImage from "@/assets/open-transport.jpg";
-import enclosedTransportImage from "@/assets/enclosed-transport.jpg";
 
 export default function Services() {
   const services = [
@@ -12,7 +10,7 @@ export default function Services() {
       title: "Open Car Transport",
       description: "Cost-effective shipping for standard vehicles using open car carriers.",
       features: ["Most affordable option", "Faster pickup times", "Safe & reliable", "Weather protection"],
-      image: openTransportImage,
+      image: "/lovable-uploads/798b0daf-4947-406f-ab73-1b1596ca848e.png",
       popular: true
     },
     {
@@ -20,7 +18,7 @@ export default function Services() {
       title: "Enclosed Transport",
       description: "Premium protection for luxury, classic, or high-value vehicles.",
       features: ["Maximum protection", "Climate controlled", "Luxury vehicles", "Classic cars"],
-      image: enclosedTransportImage,
+      image: "/lovable-uploads/a3f4466b-b7e3-4d1b-8811-28fb486fa5e7.png",
       popular: false
     },
     {
@@ -28,7 +26,7 @@ export default function Services() {
       title: "Truck & Large Vehicle",
       description: "Specialized transport for trucks, RVs, and oversized vehicles.",
       features: ["Heavy duty transport", "Specialized equipment", "Pickup trucks", "Commercial vehicles"],
-      image: openTransportImage,
+      image: "/lovable-uploads/cd053653-855d-459f-ab26-ec7a02f6f4da.png",
       popular: false
     },
     {
@@ -36,7 +34,7 @@ export default function Services() {
       title: "Motorcycle Shipping",
       description: "Expert motorcycle transport with specialized securing methods.",
       features: ["Secure crating", "Professional handling", "All bike types", "Door-to-door service"],
-      image: enclosedTransportImage,
+      image: "/lovable-uploads/a3f4466b-b7e3-4d1b-8811-28fb486fa5e7.png",
       popular: false
     }
   ];
