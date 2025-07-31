@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Shield, Clock, MapPin, Award, ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
@@ -8,19 +8,40 @@ export default function Hero() {
 
   const heroSlides = [
     {
-      image: "/lovable-uploads/cd053653-855d-459f-ab26-ec7a02f6f4da.png",
-      title: "Professional Truck Transport",
-      subtitle: "Specialized hauling for pickup trucks and large vehicles"
+      image: "/lovable-uploads/f86f02fc-9210-4447-bca7-6db8105270c2.png",
+      alt: "Vehicle transport on flatbed trailer"
     },
     {
-      image: "/lovable-uploads/a3f4466b-b7e3-4d1b-8811-28fb486fa5e7.png", 
-      title: "Multi-Vehicle Car Carriers",
-      subtitle: "Efficient transport for multiple vehicles in one shipment"
+      image: "/lovable-uploads/4f7dfc91-f515-4c71-81e5-a064f736cfe2.png", 
+      alt: "Multiple vehicles loaded on car carrier"
     },
     {
-      image: "/lovable-uploads/798b0daf-4947-406f-ab73-1b1596ca848e.png",
-      title: "Open Auto Transport",
-      subtitle: "Cost-effective shipping for cars, SUVs, and trucks"
+      image: "/lovable-uploads/e2ed17b5-eabb-4119-bb41-ce39723b10d2.png",
+      alt: "Multi-vehicle car transport trailer"
+    },
+    {
+      image: "/lovable-uploads/4ed215ec-ed2c-4b1b-8391-b7665d342daf.png",
+      alt: "Professional vehicle transport service"
+    },
+    {
+      image: "/lovable-uploads/487aaaa6-745e-4cdd-a9f5-6c6ebf936167.png",
+      alt: "Vehicle ready for transport"
+    },
+    {
+      image: "/lovable-uploads/295bc73a-91a5-4d89-9321-a9b89ec04c85.png",
+      alt: "Car lot vehicle transport"
+    },
+    {
+      image: "/lovable-uploads/850b4459-1f94-4c68-9836-3b80cd021cfc.png",
+      alt: "Vehicle transport and shipping"
+    },
+    {
+      image: "/lovable-uploads/4c451128-ff46-4534-a7ce-e950d43bdb36.png",
+      alt: "Professional auto transport"
+    },
+    {
+      image: "/lovable-uploads/a4cf7a52-9f67-49fc-8caa-0a6a85eb2b16.png",
+      alt: "Vehicle carrier with multiple cars"
     }
   ];
 
@@ -39,136 +60,106 @@ export default function Hero() {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
   };
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-primary-blue via-primary-blue-light to-primary-blue-lighter overflow-hidden">
-      {/* Background Image Carousel with Overlay */}
-      <div className="absolute inset-0 z-0">
+    <section className="bg-white">
+      {/* Clean Image Slider - Google Business Profile Style */}
+      <div className="relative h-96 lg:h-[500px] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? "opacity-60" : "opacity-0"
+              index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
             <img
               src={slide.image}
-              alt={slide.title}
+              alt={slide.alt}
               className="w-full h-full object-cover"
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary-blue/70 via-primary-blue/50 to-transparent"></div>
-      </div>
+        
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-all"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
 
-      {/* Carousel Navigation */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-smooth"
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-smooth"
-      >
-        <ChevronRight className="h-6 w-6" />
-      </button>
-
-      {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col items-center justify-center text-center text-white space-y-8">
-          <div className="space-y-6 max-w-4xl">
-            <div className="flex items-center justify-center space-x-2 text-white">
-              <Shield className="h-6 w-6" />
-              <span className="font-semibold text-lg">Angel's Trusted Transport</span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-              Professional
-              <span className="block text-white">Vehicle Transport</span>
-              <span className="block text-2xl lg:text-3xl font-normal mt-4 text-white/90">
-                Delivering on Promise
-              </span>
-            </h1>
-            
-            {/* Dynamic subtitle based on current slide */}
-            <div className="bg-white/15 backdrop-blur-sm rounded-lg p-6 mb-8">
-              <p className="text-xl font-semibold text-white">
-                {heroSlides[currentSlide].subtitle}
-              </p>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/quote">
-                <Button variant="accent" size="hero" className="bg-white text-primary-blue hover:bg-white/90">
-                  Get Free Quote
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button 
-                  variant="outline" 
-                  size="xl" 
-                  className="border-white text-white hover:bg-white hover:text-primary-blue"
-                >
-                  Call (780) 707-8444
-                </Button>
-              </Link>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-12">
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-3">
-                  <Shield className="h-10 w-10 text-white" />
-                </div>
-                <div className="text-base font-semibold">Licensed &</div>
-                <div className="text-base">Insured</div>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-3">
-                  <Clock className="h-10 w-10 text-white" />
-                </div>
-                <div className="text-base font-semibold">Fast &</div>
-                <div className="text-base">Reliable</div>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-3">
-                  <MapPin className="h-10 w-10 text-white" />
-                </div>
-                <div className="text-base font-semibold">Nationwide</div>
-                <div className="text-base">Coverage</div>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center mb-3">
-                  <Award className="h-10 w-10 text-white" />
-                </div>
-                <div className="text-base font-semibold">25+ Years</div>
-                <div className="text-base">Experience</div>
-              </div>
-            </div>
-          </div>
+        {/* Slide Indicators */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                index === currentSlide ? "bg-white" : "bg-white/50"
+              }`}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Carousel Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
-        {heroSlides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-smooth ${
-              index === currentSlide ? "bg-white" : "bg-white/30"
-            }`}
-          />
-        ))}
-      </div>
+      {/* Business Info Section */}
+      <div className="bg-white py-8 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center space-y-6">
+            {/* Business Name */}
+            <div className="space-y-2">
+              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">
+                Angel's Trucking Services
+              </h1>
+              <p className="text-lg text-gray-600">
+                Professional Vehicle Transport & Shipping
+              </p>
+            </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 text-white">
-        <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white rounded-full mt-2"></div>
+            {/* Call Button - Google Business Profile Style */}
+            <div className="flex justify-center">
+              <a 
+                href="tel:+17807078444"
+                className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-md hover:shadow-lg"
+              >
+                <Phone className="h-6 w-6" />
+                Call (780) 707-8444
+              </a>
+            </div>
+
+            {/* Quick Info */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 text-center">
+              <div className="space-y-1">
+                <div className="text-sm font-medium text-gray-500">LOCATION</div>
+                <div className="text-gray-900">Edmonton, Alberta</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-sm font-medium text-gray-500">EXPERIENCE</div>
+                <div className="text-gray-900">25+ Years</div>
+              </div>
+              <div className="space-y-1">
+                <div className="text-sm font-medium text-gray-500">COVERAGE</div>
+                <div className="text-gray-900">Nationwide</div>
+              </div>
+            </div>
+
+            {/* Get Quote Button */}
+            <div className="pt-4">
+              <Link to="/quote">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-blue-600 text-blue-600 hover:bg-blue-50"
+                >
+                  Get Free Quote
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
