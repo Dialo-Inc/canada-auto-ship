@@ -6,9 +6,9 @@ export default function Gallery() {
 
   const galleryImages = [
     {
-      src: "/lovable-uploads/cd053653-855d-459f-ab26-ec7a02f6f4da.png",
-      title: "Professional Truck Transport",
-      description: "Specialized hauling for pickup trucks and large vehicles"
+      src: "/lovable-uploads/798b0daf-4947-406f-ab73-1b1596ca848e.png",
+      title: "Professional Transport Service",
+      description: "Reliable and professional vehicle transport solutions"
     },
     {
       src: "/lovable-uploads/a3f4466b-b7e3-4d1b-8811-28fb486fa5e7.png", 
@@ -75,7 +75,7 @@ export default function Gallery() {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="relative aspect-[16/9] overflow-hidden rounded-xl bg-white shadow-lg">
             <img
-              src="/lovable-uploads/cd053653-855d-459f-ab26-ec7a02f6f4da.png"
+              src="/lovable-uploads/798b0daf-4947-406f-ab73-1b1596ca848e.png"
               alt="Professional Transport"
               className="w-full h-full object-cover"
             />

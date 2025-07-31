@@ -26,7 +26,7 @@ export default function Services() {
       title: "Truck & Large Vehicle",
       description: "Specialized transport for trucks, RVs, and oversized vehicles.",
       features: ["Heavy duty transport", "Specialized equipment", "Pickup trucks", "Commercial vehicles"],
-      image: "/lovable-uploads/cd053653-855d-459f-ab26-ec7a02f6f4da.png",
+      image: "/lovable-uploads/a3f4466b-b7e3-4d1b-8811-28fb486fa5e7.png",
       popular: false
     },
     {
