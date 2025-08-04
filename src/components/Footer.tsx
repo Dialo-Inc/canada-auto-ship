@@ -53,11 +53,11 @@ export default function Footer() {
               <img src={angelsLogo} alt="Angel's Trucking" className="h-12 w-auto" />
               <div>
                 <div className="text-xl font-bold text-white">Angel's Trucking</div>
-                <div className="text-sm text-gray-200 font-medium">Professional Transport Services</div>
+                <div className="text-sm text-gray-200 font-medium bg-transparent">Professional Transport Services</div>
               </div>
             </div>
             
-            <p className="text-gray-200 mb-6 leading-relaxed font-medium">
+            <p className="mb-6 leading-relaxed font-medium text-zinc-950">
               Specialized vehicle transport along the Calgary-Edmonton-Saskatoon-Grand Prairie corridor. 
               Safe, reliable service with over 25 years of experience.
             </p>
@@ -78,7 +78,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-4 w-4 text-canadian-red" />
-                <span className="text-gray-300">24/7 Customer Support</span>
+                <span className="text-slate-950">24/7 Customer Support</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-canadian-red" />
