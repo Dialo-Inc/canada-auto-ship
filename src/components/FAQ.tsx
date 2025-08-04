@@ -86,9 +86,7 @@ export default function FAQ() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+1-800-SHIP-CAR">
-                <button className="bg-canadian-red px-6 py-3 rounded-lg font-semibold hover:bg-canadian-red-light transition-smooth bg-blue-700 hover:bg-blue-600 text-zinc-50">
-                  Call: 1-800-SHIP-CAR
-                </button>
+                <button className="bg-canadian-red px-6 py-3 rounded-lg font-semibold hover:bg-canadian-red-light transition-smooth bg-blue-700 hover:bg-blue-600 text-zinc-50">Call: (780) 707-8444</button>
               </a>
               <a href="/contact">
                 <button className="border border-navy text-navy px-6 py-3 rounded-lg font-semibold hover:bg-navy hover:text-white transition-smooth">
