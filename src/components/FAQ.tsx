@@ -7,12 +7,12 @@ export default function FAQ() {
 
   const faqs = [
     {
-      question: "How much does it cost to ship a car in Canada?",
-      answer: "Car shipping costs in Canada typically range from $500 to $1,500 depending on the distance, vehicle type, and shipping method. Factors affecting price include pickup/delivery locations, vehicle size, transport type (open vs. enclosed), and seasonal demand. We provide free, instant quotes with transparent pricing and no hidden fees."
+      question: "How much does vehicle transport cost along our Calgary-Edmonton-Saskatoon-Grand Prairie route?",
+      answer: "Vehicle transport costs along our main route typically range from $300 to $800 depending on the specific cities, vehicle type, and transport method. We specialize in the Calgary-Edmonton-Saskatoon-Grand Prairie corridor, which allows us to offer competitive pricing. Factors affecting price include exact pickup/delivery locations, vehicle size, and transport type (open vs. enclosed). We provide free, instant quotes with transparent pricing."
     },
     {
-      question: "How long does car shipping take across Canada?",
-      answer: "Transit times vary by distance: within the same province (1-3 days), coast-to-coast (7-10 days), and between neighboring provinces (3-5 days). Weather conditions, driver schedules, and route efficiency can affect timing. We provide estimated delivery windows and keep you updated throughout the journey."
+      question: "How long does transport take between Calgary, Edmonton, Saskatoon, and Grand Prairie?",
+      answer: "Transit times on our main route: Calgary to Edmonton (1-2 days), Edmonton to Saskatoon (1-2 days), Calgary to Saskatoon (2-3 days), and connections to Grand Prairie (1-2 days from Edmonton). Our regular runs along this corridor ensure efficient, reliable scheduling. Weather conditions and pickup schedules may affect timing."
     },
     {
       question: "Is my vehicle insured during transport?",
@@ -20,23 +20,23 @@ export default function FAQ() {
     },
     {
       question: "What's the difference between open and enclosed transport?",
-      answer: "Open transport uses standard car carriers (like you see on highways) and is more affordable, while enclosed transport provides full protection from weather and road debris in a covered trailer. Enclosed shipping is recommended for luxury vehicles, classics, or high-value cars. Open transport is safe and suitable for most standard vehicles."
+      answer: "Open transport uses standard car carriers and is more affordable, while enclosed transport provides full protection from weather and road debris in a covered trailer. Given our Western Canadian route, enclosed shipping is recommended during winter months or for luxury vehicles. Open transport is safe and suitable for most standard vehicles year-round."
     },
     {
       question: "How do I prepare my car for shipping?",
       answer: "Remove all personal items, ensure your car has 1/4 tank of gas, clean the vehicle for inspection, secure or remove loose parts, disable toll tags/alarms, and take photos for documentation. We'll provide a detailed preparation checklist once you book. Your vehicle should be in running condition unless special arrangements are made."
     },
     {
-      question: "Can I track my vehicle during shipping?",
-      answer: "Yes, we provide real-time tracking and regular updates throughout the shipping process. You'll receive your driver's contact information for direct communication, estimated pickup/delivery times, and notifications of any schedule changes. Our customer service team is also available 24/7 for updates."
+      question: "Do you provide service outside your main route?",
+      answer: "While we specialize in the Calgary-Edmonton-Saskatoon-Grand Prairie corridor, we can arrange connections to other Alberta and Saskatchewan locations. Our main route coverage ensures the most efficient and cost-effective service. Contact us to discuss transportation to locations outside our primary corridor."
     },
     {
       question: "What forms of payment do you accept?",
       answer: "We accept cash, certified checks, money orders, and e-transfers. A small deposit may be required to secure your booking, with the balance due upon delivery. We do not accept personal checks or credit cards for the final payment to ensure secure transactions for both parties."
     },
     {
-      question: "Do you ship to remote areas in Canada?",
-      answer: "We provide service to most locations across Canada, including remote areas. For locations outside major cities, we may arrange delivery to the nearest accessible point and coordinate final delivery. Additional fees may apply for very remote locations. Contact us to confirm service availability to your specific location."
+      question: "Can I track my vehicle during shipping?",
+      answer: "Yes, we provide real-time tracking and regular updates throughout the shipping process. You'll receive your driver's contact information for direct communication, estimated pickup/delivery times, and notifications of any schedule changes. Our customer service team is also available for updates."
     }
   ];
 

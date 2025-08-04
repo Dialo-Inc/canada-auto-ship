@@ -8,37 +8,37 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Sarah Mitchell",
-      location: "Toronto to Vancouver",
+      location: "Calgary to Edmonton",
       rating: 5,
-      text: "Outstanding service! My car was picked up on time and delivered in perfect condition. The driver was professional and kept me updated throughout the journey. Highly recommend Canada Auto Ship!",
+      text: "Outstanding service! My car was picked up on time in Calgary and delivered in perfect condition in Edmonton. The driver was professional and kept me updated throughout the journey. Highly recommend Angel's Trucking!",
       vehicle: "2022 Honda Civic"
     },
     {
       name: "David Chen",
-      location: "Calgary to Montreal",
+      location: "Edmonton to Saskatoon",
       rating: 5,
-      text: "I was nervous about shipping my classic Mustang, but Canada Auto Ship made the process smooth and stress-free. The enclosed transport option gave me peace of mind. Excellent communication and fair pricing.",
+      text: "I was nervous about shipping my classic Mustang, but Angel's Trucking made the process smooth and stress-free. The enclosed transport option gave me peace of mind. Excellent communication and fair pricing.",
       vehicle: "1967 Ford Mustang"
     },
     {
       name: "Maria Rodriguez",
-      location: "Halifax to Edmonton",
+      location: "Saskatoon to Calgary",
       rating: 5,
-      text: "Professional service from start to finish. The quote was accurate, pickup was on schedule, and my SUV arrived exactly when promised. Will definitely use them again for my next move.",
+      text: "Professional service from start to finish. The quote was accurate, pickup was on schedule, and my SUV arrived exactly when promised. Will definitely use them again for my next transport.",
       vehicle: "2021 Toyota RAV4"
     },
     {
       name: "Robert Thompson",
-      location: "Winnipeg to Ottawa",
+      location: "Grand Prairie to Edmonton",
       rating: 5,
-      text: "Great experience shipping my truck across the country. The team was responsive to my questions and the tracking system kept me informed. Fair pricing and reliable service.",
+      text: "Great experience shipping my truck along their main route. The team was responsive to my questions and the tracking system kept me informed. Fair pricing and reliable service.",
       vehicle: "2020 Ford F-150"
     },
     {
       name: "Jennifer Park",
-      location: "Victoria to Quebec City",
+      location: "Calgary to Saskatoon",
       rating: 5,
-      text: "I needed to ship my car quickly for a job relocation. Canada Auto Ship accommodated my tight timeline and delivered my vehicle safely. Professional and efficient service!",
+      text: "I needed to ship my car quickly for a job relocation. Angel's Trucking accommodated my tight timeline and delivered my vehicle safely. Professional and efficient service!",
       vehicle: "2023 Subaru Outback"
     }
   ];
@@ -85,12 +85,12 @@ export default function Testimonials() {
             <span className="text-yellow-400 font-semibold">Customer Reviews</span>
           </div>
           
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-white">
             What Our Customers Say
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 max-w-3xl mx-auto font-medium">
             Don't just take our word for it. Here's what real customers say about 
-            their experience with Canada Auto Ship.
+            their experience with Angel's Trucking Services.
           </p>
         </div>
 
@@ -128,15 +128,15 @@ export default function Testimonials() {
                 {renderStars(testimonials[currentIndex].rating)}
               </div>
               
-              <blockquote className="text-xl lg:text-2xl leading-relaxed mb-8 text-gray-100">
+              <blockquote className="text-xl lg:text-2xl leading-relaxed mb-8 text-white font-medium">
                 "{testimonials[currentIndex].text}"
               </blockquote>
               
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="font-bold text-lg">{testimonials[currentIndex].name}</div>
-                  <div className="text-canadian-red font-medium">{testimonials[currentIndex].location}</div>
-                  <div className="text-gray-400 text-sm">{testimonials[currentIndex].vehicle}</div>
+                  <div className="font-bold text-lg text-white">{testimonials[currentIndex].name}</div>
+                  <div className="text-primary font-semibold">{testimonials[currentIndex].location}</div>
+                  <div className="text-gray-300 text-sm font-medium">{testimonials[currentIndex].vehicle}</div>
                 </div>
                 
                 <div className="text-right">

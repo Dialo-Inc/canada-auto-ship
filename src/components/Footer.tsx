@@ -1,5 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import angelsLogo from "@/assets/angels-trucking-logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,8 +15,8 @@ export default function Footer() {
   const services = [
     { name: "Open Car Transport", href: "/services#open" },
     { name: "Enclosed Transport", href: "/services#enclosed" },
-    { name: "Motorcycle Shipping", href: "/services#motorcycle" },
     { name: "Truck Transport", href: "/services#truck" },
+    { name: "Quote Request", href: "/quote" },
   ];
 
   const legal = [
@@ -38,19 +39,21 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-6">
+              <img 
+                src={angelsLogo}
+                alt="Angel's Trucking" 
+                className="h-12 w-auto"
+              />
               <div>
-                <div className="text-xl font-bold">Canada Auto Ship</div>
-                <div className="text-xs text-gray-300">Trusted Transport Solutions</div>
+                <div className="text-xl font-bold text-white">Angel's Trucking</div>
+                <div className="text-sm text-gray-200 font-medium">Professional Transport Services</div>
               </div>
             </div>
             
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Canada's most trusted auto transport company. Over 25 years of safe, 
-              reliable vehicle shipping coast to coast.
+            <p className="text-gray-200 mb-6 leading-relaxed font-medium">
+              Specialized vehicle transport along the Calgary-Edmonton-Saskatoon-Grand Prairie corridor. 
+              Safe, reliable service with over 25 years of experience.
             </p>
 
             {/* Contact Info */}
@@ -127,17 +130,31 @@ export default function Footer() {
 
           {/* Coverage Area */}
           <div>
-            <h3 className="text-lg font-bold mb-6">Service Coverage</h3>
-            <p className="text-gray-300 mb-4 text-sm">
-              We ship vehicles to and from all Canadian provinces:
+            <h3 className="text-lg font-bold mb-6 text-white">Our Main Route</h3>
+            <p className="text-gray-200 mb-4 text-sm font-medium">
+              Primary transport corridor through Western Canada:
             </p>
-            <div className="grid grid-cols-1 gap-1 text-sm">
-              {provinces.map((province) => (
-                <div key={province} className="text-gray-300">
-                  • {province}
-                </div>
-              ))}
+            <div className="space-y-2">
+              <div className="flex items-center text-gray-200 font-medium">
+                <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                Calgary, Alberta
+              </div>
+              <div className="flex items-center text-gray-200 font-medium">
+                <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                Edmonton, Alberta
+              </div>
+              <div className="flex items-center text-gray-200 font-medium">
+                <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                Saskatoon, Saskatchewan
+              </div>
+              <div className="flex items-center text-gray-200 font-medium">
+                <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                Grand Prairie, Alberta
+              </div>
             </div>
+            <p className="text-gray-300 text-xs mt-3">
+              Additional coverage available throughout Western Canada
+            </p>
           </div>
         </div>
       </div>
@@ -182,8 +199,8 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-gray-400 mb-4 md:mb-0">
-              © {currentYear} Canada Auto Ship. All rights reserved.
+            <div className="text-sm text-gray-200 mb-4 md:mb-0 font-medium">
+              © {currentYear} Angel's Trucking Services. All rights reserved.
             </div>
             
             <div className="flex flex-wrap gap-6 text-sm">

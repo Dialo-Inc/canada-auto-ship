@@ -10,12 +10,12 @@
     --background: 0 0% 100%;
     --foreground: 220 26% 14%;
     
-    /* Angel's Trucking Brand Colors */
-    --primary-blue: 214 100% 50%;
-    --primary-blue-light: 214 100% 60%;
-    --primary-blue-lighter: 214 100% 85%;
-    --accent-blue: 214 80% 45%;
-    --text-dark: 220 20% 20%;
+    /* Angel's Trucking Brand Colors - Updated for better visibility */
+    --angels-primary: 214 100% 45%;
+    --angels-primary-light: 214 100% 55%;
+    --angels-accent: 214 80% 40%;
+    --angels-white: 0 0% 100%;
+    --angels-text: 214 20% 15%;
     
     /* Professional Grays */
     --gray-50: 220 14% 96%;
@@ -54,16 +54,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 220 47% 17%;
+    --primary: 214 100% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 13% 91%;
-    --secondary-foreground: 220 26% 14%;
+    --secondary: 214 20% 95%;
+    --secondary-foreground: 214 20% 15%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 214 15% 96%;
+    --muted-foreground: 214 10% 40%;
 
-    --accent: 0 84% 60%;
+    --accent: 214 80% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;

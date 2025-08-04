@@ -28,14 +28,6 @@ export default function Services() {
       features: ["Heavy duty transport", "Specialized equipment", "Pickup trucks", "Commercial vehicles"],
       image: "/lovable-uploads/a3f4466b-b7e3-4d1b-8811-28fb486fa5e7.png",
       popular: false
-    },
-    {
-      icon: Bike,
-      title: "Motorcycle Shipping",
-      description: "Expert motorcycle transport with specialized securing methods.",
-      features: ["Secure crating", "Professional handling", "All bike types", "Door-to-door service"],
-      image: "/lovable-uploads/a3f4466b-b7e3-4d1b-8811-28fb486fa5e7.png",
-      popular: false
     }
   ];
 
@@ -130,11 +122,11 @@ export default function Services() {
         {/* Benefits Section */}
         <div className="bg-gradient-subtle rounded-3xl p-8 lg:p-12">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-navy mb-4">
-              Why Choose Canada Auto Ship?
+            <h3 className="text-3xl font-bold text-foreground mb-4">
+              Why Choose Angel's Trucking Services?
             </h3>
-            <p className="text-gray-600 text-lg">
-              We're committed to providing the best car shipping experience in Canada
+            <p className="text-muted-foreground text-lg">
+              Specialized transport along the Calgary-Edmonton-Saskatoon-Grand Prairie corridor
             </p>
           </div>
           

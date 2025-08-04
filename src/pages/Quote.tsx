@@ -51,7 +51,6 @@ export default function Quote() {
     { value: "suv", label: "SUV/Crossover", icon: Car },
     { value: "truck", label: "Pickup Truck", icon: Truck },
     { value: "van", label: "Van/Minivan", icon: Car },
-    { value: "motorcycle", label: "Motorcycle", icon: Bike },
     { value: "luxury", label: "Luxury Vehicle", icon: Car },
     { value: "classic", label: "Classic/Antique", icon: Car },
     { value: "other", label: "Other", icon: Car }
