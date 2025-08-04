@@ -1,50 +1,56 @@
 import { MapPin, Phone, Mail, Clock, Facebook, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import angelsLogo from "@/assets/angels-trucking-logo.png";
-
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const quickLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Our Services", href: "/services" },
-    { name: "Get Quote", href: "/quote" },
-    { name: "Contact Us", href: "/contact" },
-  ];
-
-  const services = [
-    { name: "Open Car Transport", href: "/services#open" },
-    { name: "Enclosed Transport", href: "/services#enclosed" },
-    { name: "Truck Transport", href: "/services#truck" },
-    { name: "Quote Request", href: "/quote" },
-  ];
-
-  const legal = [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms & Conditions", href: "/terms" },
-    { name: "Insurance Info", href: "/insurance" },
-    { name: "Shipping Guide", href: "/guide" },
-  ];
-
-  const provinces = [
-    "British Columbia", "Alberta", "Saskatchewan", "Manitoba",
-    "Ontario", "Quebec", "New Brunswick", "Nova Scotia",
-    "Prince Edward Island", "Newfoundland"
-  ];
-
-  return (
-    <footer className="bg-navy text-white">
+  const quickLinks = [{
+    name: "About Us",
+    href: "/about"
+  }, {
+    name: "Our Services",
+    href: "/services"
+  }, {
+    name: "Get Quote",
+    href: "/quote"
+  }, {
+    name: "Contact Us",
+    href: "/contact"
+  }];
+  const services = [{
+    name: "Open Car Transport",
+    href: "/services#open"
+  }, {
+    name: "Enclosed Transport",
+    href: "/services#enclosed"
+  }, {
+    name: "Truck Transport",
+    href: "/services#truck"
+  }, {
+    name: "Quote Request",
+    href: "/quote"
+  }];
+  const legal = [{
+    name: "Privacy Policy",
+    href: "/privacy"
+  }, {
+    name: "Terms & Conditions",
+    href: "/terms"
+  }, {
+    name: "Insurance Info",
+    href: "/insurance"
+  }, {
+    name: "Shipping Guide",
+    href: "/guide"
+  }];
+  const provinces = ["British Columbia", "Alberta", "Saskatchewan", "Manitoba", "Ontario", "Quebec", "New Brunswick", "Nova Scotia", "Prince Edward Island", "Newfoundland"];
+  return <footer className="bg-navy text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img 
-                src={angelsLogo}
-                alt="Angel's Trucking" 
-                className="h-12 w-auto"
-              />
+              <img src={angelsLogo} alt="Angel's Trucking" className="h-12 w-auto" />
               <div>
                 <div className="text-xl font-bold text-white">Angel's Trucking</div>
                 <div className="text-sm text-gray-200 font-medium">Professional Transport Services</div>
@@ -98,16 +104,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link 
-                    to={link.href} 
-                    className="text-gray-300 hover:text-canadian-red transition-smooth"
-                  >
+              {quickLinks.map(link => <li key={link.name}>
+                  <Link to={link.href} className="text-gray-300 hover:text-canadian-red transition-smooth">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -115,16 +116,11 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-6">Our Services</h3>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link 
-                    to={service.href} 
-                    className="text-gray-300 hover:text-canadian-red transition-smooth"
-                  >
+              {services.map(service => <li key={service.name}>
+                  <Link to={service.href} className="text-gray-300 hover:text-canadian-red transition-smooth">
                     {service.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -164,28 +160,28 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-8">
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2">
+              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2 bg-zinc-600">
                 <span className="text-canadian-red font-bold">✓</span>
               </div>
               <div className="text-sm font-semibold">Licensed & Insured</div>
               <div className="text-xs text-gray-400">Fully Compliant</div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2">
+              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2 bg-zinc-600">
                 <span className="text-canadian-red font-bold">A+</span>
               </div>
               <div className="text-sm font-semibold">BBB Accredited</div>
               <div className="text-xs text-gray-400">Top Rating</div>
             </div>
-            <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2">
+            <div className="flex flex-col items-center bg-transparent">
+              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2 bg-zinc-600">
                 <span className="text-canadian-red font-bold">24/7</span>
               </div>
               <div className="text-sm font-semibold">Customer Support</div>
               <div className="text-xs text-gray-400">Always Available</div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2">
+              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2 bg-zinc-600">
                 <span className="text-canadian-red font-bold">25+</span>
               </div>
               <div className="text-sm font-semibold">Years Experience</div>
@@ -204,19 +200,12 @@ export default function Footer() {
             </div>
             
             <div className="flex flex-wrap gap-6 text-sm">
-              {legal.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-gray-400 hover:text-canadian-red transition-smooth"
-                >
+              {legal.map(item => <Link key={item.name} to={item.href} className="text-gray-400 hover:text-canadian-red transition-smooth">
                   {item.name}
-                </Link>
-              ))}
+                </Link>)}
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
