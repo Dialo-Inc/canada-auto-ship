@@ -63,9 +63,9 @@ export default function Navigation() {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src={angelsLogo}
+                src="/src/assets/angels-logo-updated.png"
                 alt="Angel's Trucking" 
-                className="h-12 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
 

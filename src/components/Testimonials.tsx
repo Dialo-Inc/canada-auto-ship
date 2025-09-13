@@ -128,20 +128,20 @@ export default function Testimonials() {
                 {renderStars(testimonials[currentIndex].rating)}
               </div>
               
-              <blockquote className="text-xl lg:text-2xl leading-relaxed mb-8 text-white font-medium">
-                "{testimonials[currentIndex].text}"
-              </blockquote>
+            <p className="text-xl md:text-2xl font-medium leading-relaxed text-white mb-8 italic">
+              "{testimonials[currentIndex].text}"
+            </p>
               
               <div className="flex items-center justify-between">
                 <div>
                   <div className="font-bold text-lg text-white">{testimonials[currentIndex].name}</div>
-                  <div className="text-primary font-semibold">{testimonials[currentIndex].location}</div>
-                  <div className="text-gray-300 text-sm font-medium">{testimonials[currentIndex].vehicle}</div>
+                  <div className="text-primary-blue font-semibold">{testimonials[currentIndex].location}</div>
+                  <div className="text-gray-200 text-sm font-medium">{testimonials[currentIndex].vehicle}</div>
                 </div>
                 
                 <div className="text-right">
-                  <div className="text-sm text-gray-400">Vehicle shipped</div>
-                  <div className="font-semibold">Safely & On Time</div>
+                  <div className="text-sm text-gray-300">Vehicle shipped</div>
+                  <div className="font-semibold text-white">Safely & On Time</div>
                 </div>
               </div>
             </div>
@@ -165,15 +165,15 @@ export default function Testimonials() {
         <div className="grid md:grid-cols-3 gap-8 mt-16 text-center">
           <div>
             <div className="text-4xl font-bold text-canadian-red mb-2">4.9/5</div>
-            <div className="text-gray-300">Average Rating</div>
+            <div className="text-gray-200">Average Rating</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-canadian-red mb-2">50K+</div>
-            <div className="text-gray-300">Happy Customers</div>
+            <div className="text-gray-200">Happy Customers</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-canadian-red mb-2">99.8%</div>
-            <div className="text-gray-300">On-Time Delivery</div>
+            <div className="text-gray-200">On-Time Delivery</div>
           </div>
         </div>
       </div>

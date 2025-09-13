@@ -57,34 +57,32 @@ export default function Footer() {
               </div>
             </div>
             
-            <p className="mb-6 leading-relaxed font-medium text-zinc-950">
+            <p className="mb-6 leading-relaxed font-medium text-gray-200">
               Specialized vehicle transport along the Calgary-Edmonton-Saskatoon-Grand Prairie corridor. 
-              Safe, reliable service with over 25 years of experience.
+              Safe, reliable service with over 10 years of experience.
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-canadian-red" />
-                <a href="tel:+1-800-SHIP-CAR" className="hover:text-canadian-red transition-smooth">
-                  1-800-SHIP-CAR
+                <a href="tel:+17807078444" className="hover:text-canadian-red transition-smooth text-gray-200">
+                  (780) 707-8444
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-canadian-red" />
-                <a href="mailto:info@canadaautoship.ca" className="hover:text-canadian-red transition-smooth">
-                  info@canadaautoship.ca
+                <a href="mailto:info@angelstrucking.ca" className="hover:text-canadian-red transition-smooth text-gray-200">
+                  info@angelstrucking.ca
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="h-4 w-4 text-canadian-red" />
-                <span className="text-slate-950">24/7 Customer Support</span>
+                <span className="text-gray-200">24/7 Customer Support</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-canadian-red" />
-                <span className="text-gray-300">Serving All Canadian Provinces</span>
+                <span className="text-gray-200">Suite 110- 15397 117 Ave T5M3X4 Edmonton AB</span>
               </div>
-            </div>
 
             {/* Social Media */}
             <div className="flex space-x-4 mt-6">
@@ -101,28 +99,23 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-6 text-white">Quick Links</h3>
             <ul className="space-y-3">
-              {quickLinks.map(link => <li key={link.name}>
-                  <Link to={link.href} className="text-gray-300 hover:text-canadian-red transition-smooth">
-                    {link.name}
-                  </Link>
-                </li>)}
+              <li><Link to="/about" className="text-gray-200 hover:text-canadian-red transition-smooth">About Us</Link></li>
+              <li><Link to="/services" className="text-gray-200 hover:text-canadian-red transition-smooth">Our Services</Link></li>
+              <li><Link to="/quote" className="text-gray-200 hover:text-canadian-red transition-smooth">Get Quote</Link></li>
+              <li><Link to="/contact" className="text-gray-200 hover:text-canadian-red transition-smooth">Contact Us</Link></li>
             </ul>
-          </div>
 
           {/* Services */}
-          <div>
-            <h3 className="text-lg font-bold mb-6">Our Services</h3>
+            <h3 className="text-lg font-bold mb-6 text-white">Our Services</h3>
             <ul className="space-y-3">
-              {services.map(service => <li key={service.name}>
-                  <Link to={service.href} className="text-gray-300 hover:text-canadian-red transition-smooth">
-                    {service.name}
-                  </Link>
-                </li>)}
+              <li><Link to="/services#open" className="text-gray-200 hover:text-canadian-red transition-smooth">Open Car Transport</Link></li>
+              <li><Link to="/services#enclosed" className="text-gray-200 hover:text-canadian-red transition-smooth">Enclosed Transport</Link></li>
+              <li><Link to="/services#truck" className="text-gray-200 hover:text-canadian-red transition-smooth">Truck Transport</Link></li>
+              <li><Link to="/quote" className="text-gray-200 hover:text-canadian-red transition-smooth">Quote Request</Link></li>
+              <li><span className="text-yellow-300 font-bold hover:text-yellow-200 cursor-pointer">💰 We Buy Scrap Cars for Cash $$$$</span></li>
             </ul>
-          </div>
 
           {/* Coverage Area */}
           <div>
@@ -160,32 +153,32 @@ export default function Footer() {
         <div className="container mx-auto px-4 py-8">
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2 bg-zinc-600">
+              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2">
                 <span className="text-canadian-red font-bold">✓</span>
               </div>
-              <div className="text-sm font-semibold">Licensed & Insured</div>
-              <div className="text-xs text-gray-400">Fully Compliant</div>
+              <div className="text-sm font-semibold text-white">Licensed & Insured</div>
+              <div className="text-xs text-gray-300">Fully Compliant</div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2 bg-zinc-600">
+              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2">
                 <span className="text-canadian-red font-bold">A+</span>
               </div>
-              <div className="text-sm font-semibold">BBB Accredited</div>
-              <div className="text-xs text-gray-400">Top Rating</div>
+              <div className="text-sm font-semibold text-white">BBB Accredited</div>
+              <div className="text-xs text-gray-300">Top Rating</div>
             </div>
             <div className="flex flex-col items-center bg-transparent">
-              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2 bg-zinc-600">
+              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2">
                 <span className="text-canadian-red font-bold">24/7</span>
               </div>
-              <div className="text-sm font-semibold">Customer Support</div>
-              <div className="text-xs text-gray-400">Always Available</div>
+              <div className="text-sm font-semibold text-white">Customer Support</div>
+              <div className="text-xs text-gray-300">Always Available</div>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2 bg-zinc-600">
-                <span className="text-canadian-red font-bold">25+</span>
+              <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2">
+                <span className="text-canadian-red font-bold">10+</span>
               </div>
-              <div className="text-sm font-semibold">Years Experience</div>
-              <div className="text-xs text-gray-400">Since 1998</div>
+              <div className="text-sm font-semibold text-white">Years Experience</div>
+              <div className="text-xs text-gray-300">Since 2014</div>
             </div>
           </div>
         </div>
@@ -199,10 +192,9 @@ export default function Footer() {
               © {currentYear} Angel's Trucking Services. All rights reserved.
             </div>
             
-            <div className="flex flex-wrap gap-6 text-sm">
-              {legal.map(item => <Link key={item.name} to={item.href} className="text-gray-400 hover:text-canadian-red transition-smooth">
-                  {item.name}
-                </Link>)}
+              <div className="flex flex-wrap gap-6 text-sm">
+              <Link to="/privacy" className="text-gray-300 hover:text-canadian-red transition-smooth">Privacy Policy</Link>
+              <Link to="/terms" className="text-gray-300 hover:text-canadian-red transition-smooth">Terms & Conditions</Link>
             </div>
           </div>
         </div>

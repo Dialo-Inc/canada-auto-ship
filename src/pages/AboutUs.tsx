@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import canadianLandscape from "@/assets/canadian-landscape.jpg";
+import SEOHead from "@/components/SEOHead";
+
 export default function AboutUs() {
   const stats = [{
     icon: Award,
-    number: "25+",
+    number: "10+",
     label: "Years in Business",
-    description: "Serving Canada since 1998"
+    description: "Serving Canada since 2014"
   }, {
     icon: Users,
     number: "50,000+",
@@ -28,25 +30,25 @@ export default function AboutUs() {
     description: "Licensed & insured fleet"
   }];
   const timeline = [{
-    year: "1998",
+    year: "2014",
     title: "Company Founded",
     description: "Started as a small family business with a vision to provide reliable auto transport across Canada."
   }, {
-    year: "2005",
+    year: "2016",
     title: "Expanded Fleet",
     description: "Grew our network of carrier partners to serve all major Canadian cities and routes."
   }, {
-    year: "2012",
+    year: "2018",
     title: "Technology Integration",
     description: "Implemented advanced tracking systems and online quote platforms for better customer experience."
   }, {
-    year: "2018",
+    year: "2020",
     title: "Industry Leadership",
     description: "Became one of Canada's top auto transport companies with 20,000+ successful deliveries."
   }, {
-    year: "2023",
+    year: "2024",
     title: "Continued Innovation",
-    description: "Celebrating 25 years of excellence with 50,000+ vehicles safely transported across Canada."
+    description: "Celebrating over 10 years of excellence with 50,000+ vehicles safely transported across Canada."
   }];
   const values = [{
     icon: Shield,
@@ -79,6 +81,11 @@ export default function AboutUs() {
     description: "Dedicated to providing outstanding customer support and satisfaction."
   }];
   return <div className="min-h-screen">
+      <SEOHead 
+        title="About Angel's Trucking Services - Over 10 Years Vehicle Transport Experience Calgary Edmonton"
+        description="Learn about Angel's Trucking Services, providing professional vehicle transport along the Calgary-Edmonton-Saskatoon-Grand Prairie corridor for over 10 years. Licensed, insured, and trusted."
+        keywords="Angel's Trucking about, vehicle transport company history, Calgary Edmonton transport service, Alberta Saskatchewan shipping"
+      />
       <Navigation />
       
       {/* Hero Section */}
@@ -96,8 +103,8 @@ export default function AboutUs() {
               Canada's Most Trusted
               <span className="block text-canadian-red">Auto Transport Company</span>
             </h1>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed text-slate-950">
-              For over 25 years, we've been Canada's premier vehicle shipping company, 
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed text-white">
+              For over 10 years, we've been Canada's premier vehicle shipping company, 
               safely transporting over 50,000 vehicles coast to coast with unmatched 
               reliability and customer service.
             </p>
@@ -131,18 +138,18 @@ export default function AboutUs() {
             <div>
               <h2 className="text-4xl font-bold text-navy mb-6">Our Story</h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
-                <p className="text-slate-950">
-                  Canada Auto Ship was founded in 1998 with a simple mission: to provide 
+                <p className="text-gray-600">
+                  Angel's Trucking was founded in 2014 with a simple mission: to provide 
                   safe, reliable, and affordable vehicle transport services across Canada. 
                   What started as a small family business has grown into one of the nation's 
                   most trusted auto transport companies.
                 </p>
-                <p className="text-slate-950">
-                  Over the past 25 years, we've built our reputation on three core principles: 
+                <p className="text-gray-600">
+                  Over the past 10 years, we've built our reputation on three core principles: 
                   safety, reliability, and exceptional customer service. Every vehicle we 
                   transport is treated with the same care and attention we'd give to our own.
                 </p>
-                <p className="text-slate-950">
+                <p className="text-gray-600">
                   Today, we're proud to serve customers from coast to coast, with a network 
                   of licensed and insured carriers who share our commitment to excellence. 
                   Whether you're moving across the country, buying a car from another province, 
@@ -175,8 +182,8 @@ export default function AboutUs() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-navy mb-4">Our Journey</h2>
-            <p className="text-xl max-w-3xl mx-auto text-slate-950">
-              25 years of growth, innovation, and unwavering commitment to our customers
+            <p className="text-xl max-w-3xl mx-auto text-gray-600">
+              Over 10 years of growth, innovation, and unwavering commitment to our customers
             </p>
           </div>
           
@@ -195,8 +202,8 @@ export default function AboutUs() {
                     {/* Content */}
                     <div className="ml-8 bg-white rounded-xl shadow-soft p-6 flex-1">
                       <div className="text-sm text-canadian-red font-semibold mb-1">{item.year}</div>
-                      <h3 className="text-xl font-bold text-navy mb-2 text-slate-950">{item.title}</h3>
-                      <p className="text-slate-950">{item.description}</p>
+                      <h3 className="text-xl font-bold text-navy mb-2">{item.title}</h3>
+                      <p className="text-gray-600">{item.description}</p>
                     </div>
                   </div>)}
               </div>
@@ -210,7 +217,7 @@ export default function AboutUs() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our Core Values</h2>
-            <p className="text-xl max-w-3xl mx-auto text-slate-950">
+            <p className="text-xl max-w-3xl mx-auto text-gray-200">
               These principles guide everything we do and ensure we deliver 
               the best auto transport experience in Canada.
             </p>
@@ -227,7 +234,7 @@ export default function AboutUs() {
                       </div>
                       <div>
                         <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                        <p className="leading-relaxed text-zinc-950">{value.description}</p>
+                        <p className="leading-relaxed text-gray-200">{value.description}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -269,18 +276,18 @@ export default function AboutUs() {
         <div className="container mx-auto px-4">
           <div className="bg-gradient-hero rounded-3xl p-12 text-center text-white">
             <h2 className="text-4xl font-bold mb-4">Ready to Ship Your Vehicle?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-slate-950">
-              Join thousands of satisfied customers who trust Canada Auto Ship 
+            <p className="text-xl mb-8 max-w-2xl mx-auto text-white">
+              Join thousands of satisfied customers who trust Angel's Trucking 
               for their vehicle transport needs. Get your free quote today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/quote">
-                <Button variant="accent" size="xl" className="text-zinc-50 bg-blue-700 hover:bg-blue-600">
+                <Button variant="default" size="xl" className="bg-primary-blue hover:bg-primary-blue-light text-white">
                   Get Free Quote
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="red-outline" size="xl" className="border-white text-white hover:text-navy bg-blue-700 hover:bg-blue-600">
+                <Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-primary-blue">
                   Contact Us
                 </Button>
               </Link>
