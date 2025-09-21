@@ -30,21 +30,42 @@ export default function Navigation() {
     <>
       {/* Top Bar */}
       <div className="bg-primary text-primary-foreground py-2 px-4">
-        <div className="container mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
+        <div className="container mx-auto">
+          {/* Desktop Layout */}
+          <div className="hidden md:flex justify-between items-center text-sm">
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
+                <Phone className="h-4 w-4" />
+                <a href="tel:+17807078444" className="hover:text-white/80 transition-smooth font-medium">
+                  (780) 707-8444
+                </a>
+              </div>
+              <div className="flex items-center gap-1">
+                <MapPin className="h-4 w-4" />
+                <span className="font-medium">OUR ROUTE: CALGARY - EDMONTON - SASKATOON - GRAND PRAIRIE</span>
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <span className="text-white">✓</span> Licensed & Insured
+            </div>
+          </div>
+          
+          {/* Mobile Layout */}
+          <div className="md:hidden space-y-2 text-center text-sm">
+            <div className="flex items-center justify-center gap-2">
               <Phone className="h-4 w-4" />
               <a href="tel:+17807078444" className="hover:text-white/80 transition-smooth font-medium">
                 (780) 707-8444
               </a>
             </div>
-            <div className="flex items-center gap-1">
-              <MapPin className="h-4 w-4" />
-              <span className="font-medium">OUR ROUTE: CALGARY - EDMONTON - SASKATOON - GRAND PRAIRIE</span>
+            <div className="flex items-center justify-center gap-1">
+              <MapPin className="h-4 w-4 flex-shrink-0" />
+              <div className="overflow-hidden">
+                <div className="animate-marquee whitespace-nowrap font-medium">
+                  OUR ROUTE: CALGARY - EDMONTON - SASKATOON - GRAND PRAIRIE
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="hidden lg:block">
-            <span className="text-white">✓</span> Licensed & Insured
           </div>
         </div>
       </div>

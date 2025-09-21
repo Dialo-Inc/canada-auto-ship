@@ -31,15 +31,15 @@ export default function Contact() {
     icon: Phone,
     title: "Call Us",
     description: "Speak with our transport specialists",
-    details: "1-800-SHIP-CAR",
-    action: "tel:+1-800-SHIP-CAR",
+    details: "(780) 707-8444",
+    action: "tel:+17807078444",
     available: "24/7 Support"
   }, {
     icon: Mail,
     title: "Email Us",
     description: "Send us your questions anytime",
-    details: "info@canadaautoship.ca",
-    action: "mailto:info@canadaautoship.ca",
+    details: "info@angelstrucking.ca",
+    action: "mailto:info@angelstrucking.ca",
     available: "Response within 4 hours"
   }, {
     icon: MessageCircle,
@@ -50,42 +50,30 @@ export default function Contact() {
     available: "Mon-Fri 8AM-8PM EST"
   }];
   const officeLocations = [{
-    city: "Toronto",
-    province: "Ontario",
-    address: "123 Transport Way, Toronto, ON M5V 3A1",
-    phone: "(416) 555-0123",
-    hours: "Mon-Fri: 8AM-6PM EST"
-  }, {
-    city: "Vancouver",
-    province: "British Columbia",
-    address: "456 Shipping Street, Vancouver, BC V6B 1A1",
-    phone: "(604) 555-0456",
-    hours: "Mon-Fri: 8AM-6PM PST"
-  }, {
-    city: "Calgary",
+    city: "Edmonton",
     province: "Alberta",
-    address: "789 Transport Avenue, Calgary, AB T2P 1J9",
-    phone: "(403) 555-0789",
-    hours: "Mon-Fri: 8AM-6PM MST"
+    address: "Suite 110-15397 117 Ave T5M3X4 Edmonton AB",
+    phone: "(780) 707-8444",
+    hours: "24/7 Customer Support"
   }];
   const departments = [{
     icon: Users,
     name: "Sales & Quotes",
     description: "Get pricing and book your shipment",
-    email: "quotes@canadaautoship.ca",
-    phone: "1-800-SHIP-CAR"
+    email: "quotes@angelstrucking.ca",
+    phone: "(780) 707-8444"
   }, {
     icon: Phone,
     name: "Customer Service",
     description: "Support for existing shipments",
-    email: "support@canadaautoship.ca",
-    phone: "1-800-SHIP-CAR"
+    email: "support@angelstrucking.ca",
+    phone: "(780) 707-8444"
   }, {
     icon: MessageCircle,
     name: "Claims & Insurance",
     description: "Report damage or file claims",
-    email: "claims@canadaautoship.ca",
-    phone: "1-800-SHIP-CAR"
+    email: "claims@angelstrucking.ca",
+    phone: "(780) 707-8444"
   }];
   return <div className="min-h-screen">
       <Navigation />
@@ -270,10 +258,10 @@ export default function Contact() {
                   <p className="mb-4 text-canadian-red-light text-zinc-950">
                     For urgent matters related to active shipments, accidents, or breakdowns:
                   </p>
-                  <a href="tel:+1-800-SHIP-CAR" className="flex items-center space-x-2 text-white hover:text-canadian-red-light transition-smooth">
-                    <Phone className="h-5 w-5" />
-                    <span className="font-bold text-lg">1-800-SHIP-CAR</span>
-                  </a>
+                   <a href="tel:+17807078444" className="flex items-center space-x-2 text-white hover:text-canadian-red-light transition-smooth">
+                     <Phone className="h-5 w-5" />
+                     <span className="font-bold text-lg">(780) 707-8444</span>
+                   </a>
                   <p className="text-sm mt-2 text-canadian-red-light">Available 24/7</p>
                 </CardContent>
               </Card>

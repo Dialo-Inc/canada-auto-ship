@@ -5,9 +5,9 @@ import canadianLandscape from "@/assets/canadian-landscape.jpg";
 export default function About() {
   const stats = [{
     icon: Award,
-    number: "25+",
+    number: "10+",
     label: "Years Experience",
-    description: "Trusted auto transport since 1998"
+    description: "Trusted auto transport since 2014"
   }, {
     icon: Users,
     number: "50K+",
@@ -54,8 +54,8 @@ export default function About() {
               </h2>
               
               <p className="text-xl text-gray-600 leading-relaxed">
-                For over 25 years, Canada Auto Ship has been the trusted choice for vehicle 
-                transport across Canada. We've safely delivered over 50,000 vehicles, 
+                For over 10 years, Angel's Trucking has been the trusted choice for vehicle 
+                transport across Western Canada. We've safely delivered thousands of vehicles, 
                 building our reputation on reliability, safety, and exceptional customer service.
               </p>
             </div>
@@ -97,8 +97,9 @@ export default function About() {
             {/* Floating Stats Card */}
             <div className="absolute -bottom-8 -left-8 bg-white rounded-xl shadow-strong p-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-navy">25+</div>
+                <div className="text-3xl font-bold text-navy">10+</div>
                 <div className="text-sm text-gray-600">Years of Excellence</div>
+                <div className="text-xs text-gray-500 mt-1">Founded in 2014</div>
               </div>
             </div>
           </div>

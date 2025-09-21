@@ -114,7 +114,7 @@ export default function Footer() {
               <li><Link to="/services#enclosed" className="text-gray-200 hover:text-canadian-red transition-smooth">Enclosed Transport</Link></li>
               <li><Link to="/services#truck" className="text-gray-200 hover:text-canadian-red transition-smooth">Truck Transport</Link></li>
               <li><Link to="/quote" className="text-gray-200 hover:text-canadian-red transition-smooth">Quote Request</Link></li>
-              <li><span className="text-yellow-300 font-bold hover:text-yellow-200 cursor-pointer">💰 We Buy Scrap Cars for Cash $$$$</span></li>
+              <li><Link to="/contact" className="text-yellow-300 font-bold hover:text-yellow-200 cursor-pointer transition-smooth">💰 We Buy Scrap Cars for Cash $$$$</Link></li>
             </ul>
 
           {/* Coverage Area */}
@@ -177,8 +177,8 @@ export default function Footer() {
               <div className="w-12 h-12 bg-canadian-red/20 rounded-full flex items-center justify-center mb-2">
                 <span className="text-canadian-red font-bold">10+</span>
               </div>
-              <div className="text-sm font-semibold text-white">Years Experience</div>
-              <div className="text-xs text-gray-300">Since 2014</div>
+              <div className="text-sm font-semibold text-white">Over 10 Years Experience</div>
+              <div className="text-xs text-gray-300">Founded in 2014</div>
             </div>
           </div>
         </div>

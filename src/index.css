@@ -130,6 +130,18 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
 
 @layer base {
   * {

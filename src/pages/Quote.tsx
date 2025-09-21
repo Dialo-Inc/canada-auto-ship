@@ -426,7 +426,7 @@ export default function Quote() {
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <CheckCircle className="h-5 w-5 text-canadian-red" />
-                    <span className="font-semibold text-navy">25+ Years Experience</span>
+                    <span className="font-semibold text-navy">Over 10 Years Experience</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <CheckCircle className="h-5 w-5 text-canadian-red" />

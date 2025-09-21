@@ -12,7 +12,7 @@ interface SEOHeadProps {
 
 export default function SEOHead({
   title = "Angel's Trucking Services - Calgary Edmonton Saskatoon Grand Prairie Vehicle Transport",
-  description = "Professional vehicle transport services along the Calgary-Edmonton-Saskatoon-Grand Prairie corridor. Safe, reliable, and insured auto shipping with over 25 years of experience.",
+  description = "Professional vehicle transport services along the Calgary-Edmonton-Saskatoon-Grand Prairie corridor. Safe, reliable, and insured auto shipping with over 10 years of experience.",
   keywords = "vehicle transport, car shipping, Calgary Edmonton, Saskatoon Grand Prairie, auto transport, car carrier, enclosed transport, Alberta Saskatchewan",
   canonicalUrl,
   ogTitle,

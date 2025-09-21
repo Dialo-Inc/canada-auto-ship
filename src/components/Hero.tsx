@@ -140,7 +140,7 @@ export default function Hero() {
               </div>
               <div className="space-y-1">
                 <div className="text-sm font-medium text-gray-500">EXPERIENCE</div>
-                <div className="text-gray-900">25+ Years</div>
+                <div className="text-gray-900">Over 10 Years</div>
               </div>
               <div className="space-y-1">
                 <div className="text-sm font-medium text-gray-500">COVERAGE</div>

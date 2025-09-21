@@ -70,7 +70,7 @@ export default function AboutUs() {
   const team = [{
     name: "Michael Thompson",
     role: "CEO & Founder",
-    description: "25+ years in transportation industry, committed to exceptional customer service."
+    description: "Over 10 years in transportation industry, committed to exceptional customer service."
   }, {
     name: "Sarah Chen",
     role: "Operations Director",
