@@ -70,10 +70,10 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-navy text-white relative overflow-hidden">
+    <section className="py-20 bg-primary text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-canadian-red rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-accent rounded-full -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full translate-x-1/3 translate-y-1/3"></div>
       </div>
 
@@ -99,7 +99,7 @@ export default function Testimonials() {
           <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 lg:p-12 shadow-strong">
             {/* Quote Icon */}
             <div className="absolute top-6 left-6">
-              <Quote className="h-12 w-12 text-canadian-red/50" />
+              <Quote className="h-12 w-12 text-accent/50" />
             </div>
 
             {/* Navigation Buttons */}
@@ -135,7 +135,7 @@ export default function Testimonials() {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="font-bold text-lg text-white">{testimonials[currentIndex].name}</div>
-                  <div className="text-primary-blue font-semibold">{testimonials[currentIndex].location}</div>
+                  <div className="text-accent font-semibold">{testimonials[currentIndex].location}</div>
                   <div className="text-gray-200 text-sm font-medium">{testimonials[currentIndex].vehicle}</div>
                 </div>
                 
@@ -153,7 +153,7 @@ export default function Testimonials() {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-smooth ${
-                    index === currentIndex ? 'bg-canadian-red' : 'bg-white/30'
+                    index === currentIndex ? 'bg-accent' : 'bg-white/30'
                   }`}
                 />
               ))}
@@ -164,15 +164,15 @@ export default function Testimonials() {
         {/* Stats Row */}
         <div className="grid md:grid-cols-3 gap-8 mt-16 text-center">
           <div>
-            <div className="text-4xl font-bold text-canadian-red mb-2">4.9/5</div>
+            <div className="text-4xl font-bold text-accent mb-2">4.9/5</div>
             <div className="text-gray-200">Average Rating</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-canadian-red mb-2">50K+</div>
+            <div className="text-4xl font-bold text-accent mb-2">50K+</div>
             <div className="text-gray-200">Happy Customers</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-canadian-red mb-2">99.8%</div>
+            <div className="text-4xl font-bold text-accent mb-2">99.8%</div>
             <div className="text-gray-200">On-Time Delivery</div>
           </div>
         </div>

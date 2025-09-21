@@ -23,7 +23,7 @@ const Index = () => {
       <Gallery />
       
       {/* Scrap Cars Banner */}
-      <section className="py-8 bg-yellow-400 border-t-2 border-yellow-500">
+      <section className="py-8 bg-yellow-400 border-t-2 border-yellow-500 mx-4 my-8 rounded-lg">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-2">
