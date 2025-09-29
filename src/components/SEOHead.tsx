@@ -90,7 +90,7 @@ export default function SEOHead({
           ],
           "serviceType": "Vehicle Transport",
           "priceRange": "$$$",
-          "image": `${baseUrl}/angels-trucking-logo.png`,
+          "image": `${baseUrl}/og-image.jpg`,
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Vehicle Transport Services",
