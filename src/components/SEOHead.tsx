@@ -29,12 +29,14 @@ export default function SEOHead({
       
       {/* Open Graph */}
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={ogTitle || title} />
+      <meta property="og:title" content={(ogTitle || title) + ' | Call (780) 707-8444'} />
       <meta property="og:description" content={ogDescription || description} />
       <meta property="og:site_name" content="Angel's Trucking Services" />
       <meta property="og:url" content={canonicalUrl || baseUrl} />
+      {/* Prefer canonical image; include alt for accessibility */}
       <meta property="og:image" content={ogImage || `${baseUrl}/og-image.jpg`} />
       <meta property="og:image:secure_url" content={ogImage || `${baseUrl}/og-image.jpg`} />
+      <meta property="og:image:alt" content="Angel's Trucking Services vehicle transport — Call (780) 707-8444" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:type" content="image/jpeg" />
