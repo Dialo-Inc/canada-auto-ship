@@ -19,7 +19,7 @@ export default function SEOHead({
   ogDescription,
   ogImage
 }: SEOHeadProps) {
-  const baseUrl = "https://anglestrucking.com";
+  const baseUrl = "https://www.anglestrucking.com";
 
   return (
     <Helmet>
@@ -31,8 +31,10 @@ export default function SEOHead({
       <meta property="og:type" content="website" />
       <meta property="og:title" content={ogTitle || title} />
       <meta property="og:description" content={ogDescription || description} />
-      <meta property="og:image" content={ogImage || `${baseUrl}/og-image.jpg`} />
+      <meta property="og:site_name" content="Angel's Trucking Services" />
       <meta property="og:url" content={canonicalUrl || baseUrl} />
+      <meta property="og:image" content={ogImage || `${baseUrl}/og-image.jpg`} />
+      <meta property="og:image:secure_url" content={ogImage || `${baseUrl}/og-image.jpg`} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:type" content="image/jpeg" />
