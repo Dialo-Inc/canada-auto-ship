@@ -11,15 +11,15 @@ interface SEOHeadProps {
 }
 
 export default function SEOHead({
-  title = "Angel's Trucking Services - Calgary Edmonton Saskatoon Grand Prairie Vehicle Transport",
-  description = "Professional vehicle transport services along the Calgary-Edmonton-Saskatoon-Grand Prairie corridor. Safe, reliable, and insured auto shipping with over 10 years of experience.",
+  title = "Angel's Trucking Services - Professional Vehicle Transport",
+  description = "Safe, reliable, and affordable vehicle transport. Contact us at (780) 707-8444.",
   keywords = "vehicle transport, car shipping, Calgary Edmonton, Saskatoon Grand Prairie, auto transport, car carrier, enclosed transport, Alberta Saskatchewan",
   canonicalUrl,
   ogTitle,
   ogDescription,
   ogImage
 }: SEOHeadProps) {
-  const baseUrl = "https://angelstrucking.ca"; // Update with actual domain
+  const baseUrl = "https://anglestrucking.com";
 
   return (
     <Helmet>
@@ -33,6 +33,9 @@ export default function SEOHead({
       <meta property="og:description" content={ogDescription || description} />
       <meta property="og:image" content={ogImage || `${baseUrl}/og-image.jpg`} />
       <meta property="og:url" content={canonicalUrl || baseUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/jpeg" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
