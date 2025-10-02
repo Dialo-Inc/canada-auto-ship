@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MapPin } from "lucide-react";
-import angelsLogo from "@/assets/angels-trucking-logo.png";
+import angelsLogo from "@/assets/angels-trucking-logo-new.png";
 import { cn } from "@/lib/utils";
 
 export default function Navigation() {
@@ -84,9 +84,9 @@ export default function Navigation() {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <img 
-                src="/src/assets/angels-logo-updated.png"
-                alt="Angel's Trucking" 
-                className="h-20 w-auto"
+                src={angelsLogo}
+                alt="Angel's Trucking - Delivering on Promise" 
+                className="h-16 md:h-20 w-auto object-contain"
               />
             </Link>
 
